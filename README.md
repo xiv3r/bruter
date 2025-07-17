@@ -3,8 +3,13 @@
 - Termux
 
 # Installation
+- Kali
 ```
-sudo apt update && sudo apt install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter && ls
+sudo apt update && sudo apt install nmap wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter && ls
+```
+- Termux
+```
+pkg update && pkg install git nmap -y && clear && git clone https://github.com/xiv3r/bruter.git && chmod 755 bruter/bruter.sh && cd bruter && ls
 ```
 <details><summary> Termux
 </summary>
