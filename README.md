@@ -4,13 +4,13 @@
 
 # Installation
 ```
-sudo apt update && sudo apt install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter
+sudo apt update && sudo apt install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter && ls
 ```
 <details><summary> Termux
 </summary>
 
 ```
-pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | bash && cd bruter
+pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | bash && cd bruter && ls
 ```
 </details>
 
