@@ -35,7 +35,12 @@ pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubuserconten
 <details><summary> Expand
 </summary>
 
+## SSH
+
 <img src="https://github.com/xiv3r/bruter/blob/main/ssh-brute.png">
+
+## TELNET
+
 <img src="https://github.com/xiv3r/bruter/blob/main/telnet-brute.png">
 </details>
 
