@@ -11,11 +11,11 @@ sudo apt update && sudo apt install nmap wget -y && wget -qO | sudo bash && cd b
 # Usage
 - SSH
 ```
-./brute.sh ssh users.txt passwords.txt 192.168.1.1 output.txt
+./bruter.sh ssh users.txt passwords.txt 192.168.1.1 output.txt
 ```
 - TELNET
 ```
-./brute.sh telnet users.txt passwords.txt 192.168.1.1 output.txt
+./bruter.sh telnet users.txt passwords.txt 192.168.1.1 output.txt
 ```
 
 # Hint
