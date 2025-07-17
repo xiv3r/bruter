@@ -1,12 +1,18 @@
 # Platforms
-- Windows
-- Linux
+- Kali/Debian/Ubuntu
 - Termux
 
 # Installation
 ```
-sudo apt update && sudo apt install nmap wget -y && wget -qO | sudo bash && cd bruter
+sudo apt update && sudo apt install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter
 ```
+<details><summary> Termux
+</summary>
+
+```
+pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | bash && cd bruter
+```
+</details>
 
 # Usage
 - SSH
@@ -26,7 +32,7 @@ sudo apt update && sudo apt install nmap wget -y && wget -qO | sudo bash && cd b
 5. `output.txt` - bruteforce logs
 
 # Demo
-<details><summary>Expand
+<details><summary> Expand
 </summary>
 
 <img src="https://github.com/xiv3r/bruter/blob/main/ssh-brute.png">
