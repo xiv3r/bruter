@@ -1,6 +1,3 @@
-# Bruter
-Bruteforce ssh port 22 and telnet port 23
-
 # Platforms
 - Windows
 - Linux
@@ -8,7 +5,7 @@ Bruteforce ssh port 22 and telnet port 23
 
 # Installation
 ```
-sudo apt update && sudo apt install wget -y && wget -qO | sudo bash && cd bruter
+sudo apt update && sudo apt install nmap wget -y && wget -qO | sudo bash && cd bruter
 ```
 
 # Usage
@@ -20,8 +17,8 @@ sudo apt update && sudo apt install wget -y && wget -qO | sudo bash && cd bruter
 ```
 ./brute.sh telnet users.txt passwords.txt 192.168.1.1 output.txt
 ```
-# Hint
 
+# Hint
 1. `ssh/telnet` - target port
 2. `users.txt` - ssh or telnet admin account
 3. `passwords.txt` - your password wordlist you can download here 👉 [WEAKPASS.COM](https://weakpass.com)
@@ -36,3 +33,8 @@ sudo apt update && sudo apt install wget -y && wget -qO | sudo bash && cd bruter
 <img src="">
 <img src="">
 </details>
+
+# About
+Bruter - is an nmap based credentials bruteforce for ssh port 22 and telnet port 23.
+
+# ⚠️ DISCLAIMERS 
