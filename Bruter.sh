@@ -35,11 +35,11 @@ if [[ $ports == *"22"* ]] || [[ $ports == *"23"* ]]; then
     
     if [[ $choice =~ [yY] ]]; then
         # Get script parameters
-        read -p "Enter port to test: e.g 22 or 23 " port
-        read -p "Enter script name : e.g. ssh-brute, telnet-brute: " script
-        read -p "Enter path to userdb file: e.g user.txt" userdb
-        read -p "Enter path to passdb file: e.g pass.txt" passdb
-        read -p "Enter output filename: e.g log.txt" output_name
+        read -p "Enter port to test e.g 22 or 23: " port
+        read -p "Enter script name e.g. ssh-brute, telnet-brute: " script
+        read -p "Enter path to userdb file e.g user.txt: " userdb
+        read -p "Enter path to passdb file: e.g pass.txt: " passdb
+        read -p "Enter output filename e.g log.txt: " output_name
         
         # Run the detailed scan
         echo "Running bruteforce test against port $port..."
