@@ -5,7 +5,7 @@
 # Installation
 - Kali
 ```
-sudo apt update && sudo apt install nmap wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter && ls
+sudo apt update && sudo apt install nmap git wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | sudo bash && cd bruter && ls
 ```
 - Termux
 ```
