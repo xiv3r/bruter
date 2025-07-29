@@ -22,7 +22,7 @@ pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubuserconten
 # Usage
 
 ```
-bash Brute.sh
+bash Bruter.sh
 ```
 
 or
