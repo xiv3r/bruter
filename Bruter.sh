@@ -2,6 +2,8 @@
 
 # Simple Nmap port scanner with SSH/Telnet detection
 
+GW=$(ip route | awk '/default/ && /wlan[0-9]/ {print $3}')
+
 # Check if nmap is installed
 if ! command -v nmap &> /dev/null; then
     echo "Nmap is not installed. Please install it first."
@@ -9,7 +11,9 @@ if ! command -v nmap &> /dev/null; then
 fi
 
 # Get target IP or hostname
-read -p "Enter target IP/hostname: " target
+echo "Enter Router Gateway IP: Enter to use by default"
+read -r -p "> $GW " INET
+target="${INET:-$GW}"
 
 # Initial scan to detect open ports
 echo "Scanning $target for open ports..."
