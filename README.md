@@ -20,11 +20,13 @@ pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubuserconten
 </details>
 
 # Usage
+
 ```
 bash Brute.sh
 ```
+
 or
-```
+
 - SSH
 ```
 ./bruter.sh ssh users.txt passwords.txt 192.168.1.1 output.txt
