@@ -1,4 +1,4 @@
-name: Build Firmware
+name: Scan
 
 on:
   workflow_dispatch:
