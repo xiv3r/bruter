@@ -25,6 +25,7 @@ jobs:
     - name: Clone the Repository
       run: |
         wget -O bruter.sh https://github.com/xiv3r/bruter/blob/main/bruter.sh
+        chmod +x bruter.sh
         
     - name: Make User
       run: |
