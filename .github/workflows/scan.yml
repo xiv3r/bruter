@@ -33,15 +33,15 @@ jobs:
         
     - name: Make User
       run: |
-        echo root > users.txt
+        echo root > user.txt
 
     - name: Download Password
       run: |
-        wget -O password.txt "link"
+        wget -O passwords.txt https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
 
     - name: Scanning in progress 
       run: |
-         bash bruter.sh ssh users.txt passwords.txt 10.0.0.1 output.txt
+         bash bruter.sh ssh user.txt passwords.txt 10.0.0.1 output.txt
             
     - name: Determine release tag
       id: get_tag
