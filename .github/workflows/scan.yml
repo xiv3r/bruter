@@ -41,7 +41,7 @@ jobs:
 
     - name: Scanning in progress 
       run: |
-         bash bruter.sh ssh user.txt passwords.txt 194.108.117.16 output.txt
+         bash bruter.sh ssh user.txt passwords.txt 194.108.117.16 output.log
             
     - name: Determine release tag
       id: get_tag
@@ -97,6 +97,6 @@ jobs:
       with:
         tag_name: ${{ steps.get_tag.outputs.tag_name }}
         files: |
-          downloads/bruter/output.txt
+          downloads/bruter/*.log
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
