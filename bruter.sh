@@ -49,7 +49,7 @@ fi
 
 # Run Nmap command
 echo "Running Nmap $protocol brute-force scan on $gateway_ip..."
-nmap -p $port --script $script --script-args userdb="$userdb",passdb="$passdb" "$gateway_ip" -oN "$output_name"
+nmap -p $port --script $script --script-args userdb="$userdb",passdb="$passdb" "$gateway_ip" -oN "$output_name" -vv
 
 # Check if Nmap command was successful
 if [ $? -eq 0 ]; then
