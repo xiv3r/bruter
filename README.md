@@ -11,18 +11,11 @@ sudo apt update && sudo apt install nmap git wget -y && clear && wget -qO- https
 ```
 pkg update && pkg install git nmap -y && clear && git clone https://github.com/xiv3r/bruter.git && chmod 755 bruter/bruter.sh && cd bruter && ls
 ```
-<details><summary> Termux
-</summary>
-
-```
-pkg update && pkg install nmap wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/bruter/refs/heads/main/install.sh | bash && cd bruter && ls
-```
-</details>
 
 # Usage
 
 ```
-bash Bruter.sh
+bash bruter.sh
 ```
 
 or
@@ -58,7 +51,7 @@ or
 
 
 # About
-Bruter - is an nmap based credentials bruteforce for ssh port 22 and telnet port 23.
+Bruter - is an nmap based credentials bruteforcer for ssh port 22 and telnet port 23.
 
 # ⚠️ DISCLAIMERS 
 
