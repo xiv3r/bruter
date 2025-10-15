@@ -30,7 +30,7 @@ jobs:
         
     - name: Make User
       run: |
-        echo admin > user.txt
+        echo demo > user.txt
 
     - name: Download Password
       run: |
