@@ -19,12 +19,12 @@ jobs:
       run: |
         sudo apt update
         sudo apt install nmap wget -y
+        mkdir -p downloads
+        cd downloads
         
     - name: Clone the Repository
       run: |
-        git clone https://github.com/xiv3r/bruter.git
-        cd bruter
-        chmod +x bruter.sh
+        wget -O bruter.sh https://github.com/xiv3r/bruter/blob/main/bruter.sh
         
     - name: Make User
       run: |
@@ -54,6 +54,6 @@ jobs:
       with:
         tag_name: ${{ steps.get_tag.outputs.tag_name }}
         files: |
-            bruter/*.log
+            downloads/*.log
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
