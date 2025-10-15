@@ -46,7 +46,7 @@ jobs:
         if [ "${{ github.event_name }}" == "release" ]; then
           TAG_NAME="${{ github.event.release.tag_name }}"
         else
-          TAG_NAME="results"
+          TAG_NAME="test"
         fi
         echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
 
@@ -94,6 +94,6 @@ jobs:
       with:
         tag_name: ${{ steps.get_tag.outputs.tag_name }}
         files: |
-          downloads/bruter/*.log
+            bruter/*.log
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
