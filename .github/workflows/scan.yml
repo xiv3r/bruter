@@ -24,7 +24,8 @@ jobs:
         
     - name: Clone the Repository
       run: |
-        wget -O bruter.sh https://github.com/xiv3r/bruter/blob/main/bruter.sh
+        git clone https://github.com/xiv3r/bruter.git
+        cd bruter
         chmod +x bruter.sh
         
     - name: Make User
@@ -55,6 +56,6 @@ jobs:
       with:
         tag_name: ${{ steps.get_tag.outputs.tag_name }}
         files: |
-            downloads/*.log
+            bruter/*.log
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
