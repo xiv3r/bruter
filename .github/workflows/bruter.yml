@@ -46,7 +46,8 @@ jobs:
 
     - name: Scanning in progress 
       run: |
-         bash bruter.sh ssh user.txt password.txt 194.108.117.16 output.log
+         # test = 194.108.117.16
+         bash bruter.sh ssh user.txt password.txt 161.49.87.24 output.log
 
     - name: Determine release tag
       id: get_tag
