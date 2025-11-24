@@ -18,7 +18,7 @@ jobs:
     - name: Download files
       run: |
         sudo apt update
-        sudo apt install nmap wget unzip -y
+        sudo apt install nmap wget unzip gzip -y
         mkdir -p downloads
         cd downloads
         
