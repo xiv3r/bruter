@@ -24,7 +24,7 @@ jobs:
         
     - name: Scanning
       run: |
-        sudo nmap -sS -sV -sC -O -p- 143.198.87.82 -oN output.log
+        sudo nmap -sS -sV -sC -O -p- 143.198.87.82 -oN output.log -vv
         
     - name: Determine release tag
       id: get_tag
