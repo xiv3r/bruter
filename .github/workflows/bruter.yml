@@ -35,7 +35,7 @@ jobs:
 
     - name: Download Password
       run: |
-        wget -O passwords.txt https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
+          wget -O password.txt https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
         
         # wget -O rockyou.zip https://github.com/RykerWilder/rockyou.txt/raw/refs/heads/main/rockyou.txt.zip
         # unzip rockyou.zip
